@@ -12,11 +12,13 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class Event {
     private String id;
-    private List<OrderProducts> products;
-    private LocalDateTime createdAt;
     private String transactionId;
-    private double totalAmount;
-    private int totalItems;
+    private String orderId;
+    private Order payload;
+    private String source;
+    private String status;
+    private List<History> eventHistory;
+    private LocalDateTime createdAt;
 }
